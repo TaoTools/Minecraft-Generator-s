@@ -6,8 +6,9 @@
     <title>MinecraftGenerator's</title>
 
     <!--import JavaScript-->
-    <script type="text/javascript" src="./src/js/index.js" defer></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./src/js/index.js" defer></script>
 
     <!--import CSS-->
     <link rel="stylesheet" href="./src/css/style.css">
@@ -20,32 +21,908 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <ul style="list-style-type:none;">
-        <li>
+
+    <div class="d-flex justify-content-center" style="margin-top: 1%;">
+      <input id="search" type="text" class="form-control" placeholder="Rechercher. Exemple : balise ou #MCtools" aria-label="Username" aria-describedby="basic-addon1" style="width: 30%;" autocomplete="off">
+    </div>
+
+    <p class="d-flex justify-content-end" style="margin-top: -3%;">Credit : Taonix</p>
+
+    <div class="callout callout-primary" style="margin: 3%;">
+      <h4 style="margin-bottom: 1%;">Rechercher par tag :</h4>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">MCtools</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">generators</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">skin</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">generation</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">world</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">craft</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">banner</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">shield</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">trade</a>
+      <a href="#" class="tagsearch badge badge-pill badge-secondary">craft</a>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <p style="margin: 1%;">Trier par version : </p>
+      <div class="btn-group" role="group" aria-label="Basic example" style="margin-right: 1%;">
+        <button type="button" class="btn btn-primary" id="Java" >Java</button>
+        <button type="button" class="btn btn-primary" id="Bedrock" >Bedrock</button>
+        <button type="button" class="btn btn-primary" onclick="document.location.reload(true);">Reset</button>
+      </div>
+    </div>
+
+    <ul style="list-style-type:none;" id="list">
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Aspirateur de skin</p>
             <div class="card" style="margin: 1%;">
                 <div class="card-header">
                   Minecraft Tools
                 </div>
                 <div class="card-body">
+                  <div class="bd j"></div>
                   <h5 class="card-title">Aspirateur de skin</h5>
                   <p class="card-text">Outil pour aspirer les skins Minecraft.</p>
+                  <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#skin</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+                  <div class="d-flex justify-content-end">
+                    <img src="https://minecraft.tools/img/blocs/144_03.png" style="width: 5%;">
+                  </div>
                   <a href="https://minecraft.tools/fr/skin.php" class="btn btn-primary" target="_blank">Commencer</a>
                 </div>
               </div>
         </li>
-        <li>
+
+        <li class="bedrock java"> 
+          <p style="opacity: 0;">Crafting</p>
           <div class="card" style="margin: 1%;">
             <div class="card-header">
               Minecraft Tools
             </div>
             <div class="card-body">
-              <h5 class="card-title">Aspirateur de skin</h5>
-              <p class="card-text">Outil pour aspirer les skins Minecraft.</p>
-              <a href="https://minecraft.tools/fr/skin.php" class="btn btn-primary" target="_blank">Commencer</a>
+              <div class="bd j"></div>
+              <h5 class="card-title">Crafting</h5>
+              <p class="card-text">Liste des craftings dans Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/img/blocs2/058-boite%20a%20outils.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/crafting.php" class="btn btn-primary" target="_blank">Commencer</a>
             </div>
           </div>
         </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Crafting personalisé</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Crafting personalisé</h5>
+              <p class="card-text">Création de tables de crafting personnalisés pour Minecraft 1.12.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/img/blocs2/058-boite%20a%20outils.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/custom-crafting.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de monde plat</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de monde plat</h5>
+              <p class="card-text">Générateur de monde plat pour Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#world</span>
+                  <span class="badge badge-pill badge-secondary">#flat</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+                  <span class="badge badge-pill badge-secondary">#generation</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/img/blocs2/002-pelouse.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/flat.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Calcul d'enchantements</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Calcul d'enchantements</h5>
+              <p class="card-text">Calculateur d'enchantements pour Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#enchant</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/img/blocs/116.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/enchant.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Armures colorés</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Armures colorés</h5>
+              <p class="card-text">Crafting de coloration de vos vêtements en cuir.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#armor</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/css/img/sidebar/armor_color.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/armor.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">feu d'artifice</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">feu d'artifice</h5>
+              <p class="card-text">Crafting de feu d'artifice dans Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#fireWorks</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/firework.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Crafting des drapeaux</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Crafting des drapeaux</h5>
+              <p class="card-text">Crafting des drapeaux dans Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#banner</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/banner_white.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/banner.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Galerie de drapeaux Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Galerie de drapeaux Minecraft</h5>
+              <p class="card-text">Drapeaux Minecraft créés par les utilisateurs.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#banner</span>
+                  <span class="badge badge-pill badge-secondary">#gallery</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/banner_white.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/banner-galery.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Crafting des boucliers</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Crafting des boucliers</h5>
+              <p class="card-text">Crafting des boucliers dans Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#shield</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/442.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/shield.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Galerie de boucliers Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Galerie de boucliers Minecraft</h5>
+              <p class="card-text">Boucliers Minecraft créés par les utilisateurs.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#craft</span>
+                  <span class="badge badge-pill badge-secondary">#shield</span>
+                  <span class="badge badge-pill badge-secondary">#gallery</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/442.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/shield-galery.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de mondes personnalisés</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de mondes personnalisés</h5>
+              <p class="card-text">Outil pour générer les presets de mondes personnalisés dans Minecraft.</p>
+              <span class="badge badge-pill badge-secondary">#MCtools</span>
+                  <span class="badge badge-pill badge-secondary">#world</span>
+                  <span class="badge badge-pill badge-secondary">#customs</span>
+                  <span class="badge badge-pill badge-secondary">#generation</span>
+                  <span class="badge badge-pill badge-secondary">#generators</span>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs2/001_00.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/custom.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur mob et commandes summon</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur mob et commandes summon</h5>
+              <p class="card-text">Générateur de mobspawner et /summon.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/144_04.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/spawn.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de tables de loots</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de tables de loots</h5>
+              <p class="card-text">Générateur de tables de récompenses pour Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs/054.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/loots.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Potions personnalisées</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Potions personnalisées</h5>
+              <p class="card-text">Création de potions personnalisées pour Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/sidebar/potion.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/potion.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Crafting des balises (beacon)</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j bd"></div>
+              <h5 class="card-title">Crafting des balises (beacon)</h5>
+              <p class="card-text">Calcul du crafting des balises (beacon) dans Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs2/138.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/beacon-color.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Calcul de coordonnées Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j bd"></div>
+              <h5 class="card-title">Calcul de coordonnées Minecraft</h5>
+              <p class="card-text">Calculatrice de coordonnées et chunk.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/coordinate-calculator.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de selecteur</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de selecteur</h5>
+              <p class="card-text">Outil pour générer des selecteurs Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/img/blocs/144_03.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/selector.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Codes couleur Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Codes couleur Minecraft</h5>
+              <p class="card-text">Liste des codes couleur du tchat.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/color-code.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Générateur de JSON</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Générateur de JSON</h5>
+              <p class="card-text">Générateur de JSON pour Minecraft JAVA et Bedrock.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/json_text.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Texte colorés</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Colorize
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Texte colorés</h5>
+              <p class="card-text">Créé des texte colorés pour ton site internet, les tchat IRC, les forums et Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://colorize.fun/fr/minecraft" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Titre Minecraft personnalisé</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Titre Minecraft personnalisé</h5>
+              <p class="card-text">Générateur de /title pour Minecraft avec personnalisation avancée.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/title.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Panneau Minecraft personnalisé</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Panneau Minecraft personnalisé</h5>
+              <p class="card-text">Générateur de panneau pour Minecraft avec personnalisation avancée.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/sign.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de livres Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de livres Minecraft</h5>
+              <p class="card-text">Créer un livre Minecraft personnalisé.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/img/blocs2/enchant/x128/387.gif" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/book.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="bedrock java">
+          <p style="opacity: 0;">Générateur tellraw</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="bd j"></div>
+              <h5 class="card-title">Générateur tellraw</h5>
+              <p class="card-text">Outil pour générer des commandes /tellraw.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/tellraw.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Générateur de MOTD Minecraft</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Tools
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Générateur de MOTD Minecraft</h5>
+              <p class="card-text">Générer des MOTD pour serveurs Minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://minecraft.tools/fr/css/img/pixel.png" style="width: 5%;">
+              </div>
+              <a href="https://minecraft.tools/fr/motd.php" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Give Command Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Gamer Geeks NZ
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Give Command Generator</h5>
+              <p class="card-text">The give command is one of the most complicated and powerful commands in Minecraft. This tool is a simple Minecraft give command generator for generating complex commands. Paste this command into chat or a command block and you can generate the item, but remember you will need to be op (admin).</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://www.gamergeeks.nz/layout/v3/images/gamergeeks-logo.png" style="width: 5%;">
+              </div>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/give-command-generator/java/1.16" class="btn btn-primary" target="_blank">1.16</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/give-command-generator/java/1.15" class="btn btn-primary" target="_blank">1.15</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/give-command-generator/java/1.14" class="btn btn-primary" target="_blank">1.14</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/give-command-generator/java/1.13" class="btn btn-primary" target="_blank">1.13</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/give-command-generator/java/1.12" class="btn btn-primary" target="_blank">1.12</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Summon Mob Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Gamer Geeks NZ
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Summon Mob Generator</h5>
+              <p class="card-text">Summon custom mobs using this command generators to make a summon command, egg or spawner. You can create custom mobs for Minecraft, with custom mob names, give a mob weapons and armor, custom drops with drop chances and all buff mobs with custom attributes.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://www.gamergeeks.nz/layout/v3/images/gamergeeks-logo.png" style="width: 5%;">
+              </div>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/mob-generator" class="btn btn-primary" target="_blank">1.16</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/mob-generator/1.15/java" class="btn btn-primary" target="_blank">1.15</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/mob-generator/1.14/java" class="btn btn-primary" target="_blank">1.14</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/mob-generator/1.13/java" class="btn btn-primary" target="_blank">1.13</a>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/mob-generator/1.12/java" class="btn btn-primary" target="_blank">1.12</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Banner Maker</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Gamer Geeks NZ
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Banner Maker</h5>
+              <p class="card-text">Give custom banner.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://www.gamergeeks.nz/layout/v3/images/gamergeeks-logo.png" style="width: 5%;">
+              </div>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/banner-maker" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Tropical Fish Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Gamer Geeks NZ
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Tropical Fish Generator</h5>
+              <p class="card-text">This is a basic tool for creating buckets of tropical fish or summoning them. Minecraft tropical fish are usually generated randomly, but with this generator you can select and create an exact combination of fish to spawn in game. I've also included a list of pre-defined special fish in Minecraft. The summon fish command generator allows you to choose your own fish colors, you can also generate the command for give tropical fish bucket.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://www.gamergeeks.nz/layout/v3/images/gamergeeks-logo.png" style="width: 5%;">
+              </div>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/tropical-fish-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Banner Maker</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Gamer Geeks NZ
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Banner Maker</h5>
+              <p class="card-text">Give custom banner.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://www.gamergeeks.nz/layout/v3/images/gamergeeks-logo.png" style="width: 5%;">
+              </div>
+              <a href="https://www.gamergeeks.nz/apps/minecraft/banner-maker" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Custom Armor stand</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Haselkern
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Custom Armor stand</h5>
+              <p class="card-text">Site offline :'( .</p>
+              <div class="d-flex justify-content-end">
+                <img src="" style="width: 5%;">
+              </div>
+              <a href="https://haselkern.com/Minecraft-ArmorStand/" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Custom Armor stand</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Custom Armor stand</h5>
+              <p class="card-text">(1.12 et moins)</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/armorstand/" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Command Combiner</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Command Combiner</h5>
+              <p class="card-text">1.13</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/cmdcombiner" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Command Combiner Pro</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Command Combiner Pro</h5>
+              <p class="card-text">Cmd combiner for minecraft.</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/cmdcombinerpro/" class="btn btn-primary" target="_blank">1.12</a>
+              <a href="https://mrgarretto.com/cmdcombinerpro-1-11/" class="btn btn-primary" target="_blank">1.11</a>
+              <a href="https://mrgarretto.com/cmdcombinerpro-1-10/" class="btn btn-primary" target="_blank">1.10</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">MIDI to Minecraft Command Converter</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">MIDI to Minecraft Command Converter</h5>
+              <p class="card-text">MIDI to MC</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/mcmidi/" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Command version converter</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Command version converter</h5>
+              <p class="card-text">cmd version converter</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/convert-1-12" class="btn btn-primary" target="_blank">1.11 vers 1.12</a>
+              <a href="https://mrgarretto.com/entityconverter" class="btn btn-primary" target="_blank">1.10 vers 1.11 (seulement pour les entités)</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Move Towards generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Move Towards generator</h5>
+              <p class="card-text">MTG generator</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/movetowards" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Facing Motion generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Mr Garretto
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Facing Motion generator</h5>
+              <p class="card-text">FM generator</p>
+              <div class="d-flex justify-content-end">
+                <img src="https://yt3.ggpht.com/a/AATXAJyagSyJXnhUJZoettlkhFaHC0FILLeIS7_kR_fBYQ=s100-c-k-c0xffffffff-no-rj-mo" style="width: 5%;">
+              </div>
+              <a href="https://mrgarretto.com/facemotion" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Potion generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Potion generator</h5>
+              <p class="card-text">Generate vanilla minecraft potions however you like them. Make unique potions for your maps or server !</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,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" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/potion-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Minecraft Tools & Weapons Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Minecraft Tools & Weapons Generator</h5>
+              <p class="card-text">Easily create custom vanilla minecraft weapons and tools commands.</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,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" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/tool-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Minecraft Armor Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Minecraft Armor Generator</h5>
+              <p class="card-text">Generate custom minecraft armor give commands easily. Now with colored leather !</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,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" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/armor-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Minecraft Item Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Minecraft Item Generator</h5>
+              <p class="card-text">Simple generator for custom vanilla minecraft items.</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,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" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/custom-item-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Minecraft Head Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Minecraft Head Generator</h5>
+              <p class="card-text">Generate custom /give commands for Minecraft heads easily.</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QDxAPDxATDw8VERAWDg0VEBUYFg0SGBYWGBsYFhMYHCkgGBolGxUVITEhJikrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGislHiAtKy0tLS0tLSsrLS0tLS0uLS0tLSstLS0rLS0tLS8tLS0tListLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAABAAUEBgcDAgj/xAA8EAACAQICBQoEBAYCAwAAAAAAAQIDEQQhBQYSMUETIjJRYXGBkaGxB1LB0TNCcqIjYoKS4fBD8RSywv/EABsBAQADAQEBAQAAAAAAAAAAAAABAwUEBgIH/8QANhEAAgECBAIIBgIABwEAAAAAAAECAxEEBRIhMVEyQWFxkaGx8BMigcHR4ULxBhQVIzNSYnL/2gAMAwEAAhEDEQA/AMw9aeNIQBBIgEAEgCAQAQBAIQBBIgEAEgCCRAIAJAIAIAkAQSQAQBIBABAEAqy8rEAhAEEiAQASAIBABAEAhAEEiAQASAIJEAgAkAgAgCQBBJABAEgEAEAqzoKxIAgEIAgkQCACQBAIAIAgEIAgkT4nOMI6pOyR906c6klCCbb6kS5y08ww1TaM19dvU7a2VYylvKm7dm/pcTsODg7CAIBABIBABAEgCCSACAJAIAVZ0FYgCQBAIQBBIgEAEgCAQAQBAPqcHHpJxfU017nypRaumfThJOzTuY/LHhMVi6mIm5Se3UuSP0zB4ClhaajBWdt31thPERiru5zXOvSzEnjJPc9ldS+p908RVpf8cmu5nzVwlCsrVIqXehjj5R6Vmu3/AAaNHO8TDpWl3qz8vwZFf/DeDqbwvHud14O/qj7p6YpvpKUe3evualLPqMv+SLXmvz5GNX/wzXjvSmpd+z+68zMo4unPozT7L2fk8zSo43D1uhNPs4Pwe5j18uxVDepTaXPivFXR7nUcQkAgAgCQBBJABAEAqy8rIAIAkAQCEAQSIBABIAgEuAbjgNBxpJS6VSyu3+V9SXAwMRjJ1W0nZe+J6TDYKnSSbV5e+AaavChUezfmtLK+byv6mfVk4wbRp4aCnVipcL+m5oxjnpTEx8ty8f8AfUAxADGq1G28wRc+HUsLC576ITqV4X3RvJru3etjSyuj8TFR7N/D92MfOsQ6eDn/AOvl8ePlc2s9mfnxABIBABAEgCCSACAVZeViAQAQBIAgEIAgkQCACQDM0RQ5SvShw2k33LN+xTiZ6KUpdh0YWnrrRj2+m5vx5o9SVumqnNjHrbb8P+z4my2kt7lLVoQl0op96+pQ4RfFHVGpKPRZXYrQVKbunKD7HdeT+5U8PF8DojjKi47lZiNXaq6Eoz7Oi/XL1Knh5LgdEcbB8VYo8To+tT/EpyiuMrXX9yyKnCS4ovjVhLgzFjTlNxp04uc5O0YRTbk+xLeRFXexM2krs3nV7UbFQhKrUdOFSSSjRcm3Fb3tSSavuyz3bzcyuSw8pSqLjtt1HmM5vi4xhSeybbv18vuZOJ0NiafSpSa+aPOX7T0EMVRnwl9jzE8JWhxi/pv6GCXnOQASAQAQBIAgkgBVl5UIJEAgAgCQBAIQBBIgEANg1QoXqzqfLGy75P7RfmZmZTtBR5v0NTKqd6kp8l6/0bWYxumoad07COJnTlGTUNmO0rPO13l4+hx1a6U2n1GnQwkpU1JPieVHSdCe6ol2S5vuI1YPrIlh6keKMtMsKRAIAW2gsNGClVjCMZydnNRV3FcL99yynFLcprTb2vsi3Vd8UWFJgY/SDUJSXNik32u3afdOGuSjzK6k9EHLkjRr9Z6Y8oIBABIBABAEgEBJVl5UIAgkQCACAJAEAhAEEiAbJq1pDD0qbhOezNybd07WyS527h6mVjqFWpPVFXSRsZfiKNOGmTs2/e5scMRBxc4yjKKTbkmmkl2oyZxcOkrGxCSn0XfuOTYqu6lSdR75zlJ/1Nv6mJJ6m3zPVQjoio8tjExcrRfbkQfRjYfFVKf4c5Q/TJpeW5hSa4M+ZQjLpK5n09a8TTaUtmquO1Gz84/YujXkuJzTwlN8Ni0wuuVF/i0503xatNfR+hasQutHPLBy/i7nRsHKKhGKe5K63Z8cmd6VkZEnd3PWq7RZJBr+nMSlScE85NJ92/6HdgIaqt+Rn5lU00bc3b7mvG2efEEiAQASAQAQBAKsuKyACAIJEAgAgCQBAIQBBIgGdoaltVorgk3LtVtz7LtHJjpKNB9ux2ZfFyxEbdW/v6lxidBYae+movrg3H0WXoeYlh6cuo9fDGVofyv37lBpXVRNpUqtuOzOP/0vsc8sH/1Z1wzP/vHwNaxeia1OTi47Vt7i7r7+hDy7E6VNQuny38uPkWRzfBubg5pNc9vPh5lRiIuMmpJxfytNPyZyNW2Z3qSlutzN1ewnLYuhT4OonL9Mec/SJ90o6ppFOInopSfYdfNc86eWJm7JXyfAAodLT50Y9S9/+jZy6FoOXN+hhZpUvUUeS9TBNEzBIAgkQCACQCACAVZeViQCACAIJEAgAgCQBAIQBBJe6tUvxJ90V7v6GTmc+jD6+/M2Mph0p/T7/guzJNkwa8ryb/3IA16n/EqL+aXpe/sekl/s0f8A5R5eH+/XX/p+X9F1WowmtmcYzj8skmvJnmmk+J6mMnF3TsfGidCYanWdanTUJqLWTds/5dy3HxGlCLukWzxFScdMndGZjdIwpTUJJu6vdWyzf2O+jhJ1YOUWjNr42FGahJMwMbpaLf8ADzy3tWS8Doo5dJv/AHNl2HNXzOKVqSu+0qqlRybcndvezVhCMI6Y8DGnOU5OUndsD6PkgAkAQSIBABIBACrLysQBIBABAEEiAQAQBIBm6O0bUrt7CtFPnTe6P3Zz4jEwor5uPI6cNhZ138vBdZew0DQ2bPacuM72fluMl5jV1XVrcjYjllFRs735+9jJweEjShsRbau3d73c5q9Z1p6mdeHoRow0RPacrJvsKS4p8fU2acnxat55HThIa60V9fA5cbU0UJP6eJX6JhebfUvV5fc0synako836GVldPVVcuS9fbLgxDfM7BRtG/WySDWdK1tutUfBOy7ll9D0WFhooxX18TzGMqa60n9PAxToOYhAEEiAQASAIJEAgBACrLisQBAEgEAEAQSIB7YXDTqS2YRcnx6l3vgV1KsKavN2LKVGdV6YK5dQ1beznUtPsjeK+viZrzT5to7eZqLKfl3lv3bF/oLA8hR2G05OUpSa48F6JHBiq/xqmpcDQwmH+BT0vjczqqik21uTbOY6jXq+PcIOTSlbhuuy2hS+LUUOZTiKypU3PkYtTTsHBrYkpZZZW8/8Hd/pk79JW99X7OD/AFWnp6Lv76/0VGIxU6nSeXCK3I0aGGp0V8q35mXiMVUrv5nty6iy0RC0G+t+iy+5l5lO9VR5L1NfK6emk5c36e2ZxnmkWM3sU20m3GLaSV7tLqPuEdUlHmV1JaYOXJGlX69/HvPUHku8QBAIQBBIgEAEgCCRAIAVZeVEIJEAQBIBAD6hFtpJNt7kldvwDaSuyUm3ZFrDQGIcdq0U/kcs/scLzGipW37zvWW13G+3d1my6tYF0qFqkbTlOTksnbgt3Yr+Jl46tGrUvF7JGrgKEqVK0lZt/osa0IKLk+akm5PqSV2ciTbsjusaRgPiRTdlWw84LhKElLLtjK1vNm1UyaS6E0+/b8l7oPqZsOF0/hsZCUMNNznZOUHCUXCN1du6zW5ZX3mbXwlWhvNbFUoOPEamjoTjszu+5tWK6VWVKWqPEorUo1Y6ZcCqx2g6dOLny3JxW91LWX9SsaVHMJyelwu+wzZ5Sn0JeP6NZWkaLbSmt+UrNKXarr3NZRla9jkqZXiYfxv3e7mfh8ZJLmTuuxpooqYanU6UdymNevQ+W7XY/wAMstHaQlKpGMopq921lkszNxWCp04OcW+40sJj6lWooSS7zacPpCl2w719UZZqnpiIUKivOMKngm/PgWQqzh0W0VzpQn0kmadpulThWcaUdmKSurt5vPj2WN3BznOnqmzz+Op06dXTBGAdRxiAQgCCRAIAJAEEkAKwvKiAEIJEAQBIBuWqOBjyDqyitqUpbMrZqKytfvTMPMqrdTRfZLzN/K6SVLW1u35FzOgld3suN+BnGoa/o3XzRtVJOq6LtuqQcV/erx9Tsnl9ePVfuLHSkj01w0vSWja9SjUhUU0qcJQnGSe27OzT+XafgfWAoSeJipK1t/D9inH51c5EeqOw6P8ACvB2pYiu10pxhHugrv1n6GBnNS84w5K/j/RzV3ukby4p71cxSg4prTpqpXxdfnOVGFWcaMG8oxi9m6Xba9+09Tg6KpUo2W7W51QgkirWKXFNHVc+rAsS73jJx7nZ+Z8OVz4lBSVpK67Tb9R6lWpKrKcnKMVGMb23u7ee/cl5mTmk7RjHnucn+Vo05aoRszbTFPoscLG0V25kkGo46o5Vajaabk8mrNLhl3WPS0IqNOKXI8riJuVWTfW/6PAtKRAEAhAEEiAQASAQElYXlQgEAIQSIA3AOlaNpxp0adNNXjCKffbP1ueUrT+JUlLmz11Cn8OnGHJFdrrjuQ0fiZp2k6bhBrepVOYmu7av4FuDp660V238NzogryRww9KdR0P4TaMhP/yq84RnHmUknFNP88rp98DKzOq46Yp9vvzKar4I2vHamaPq58jyUvmpScP2rm+hyU8yxEP5X79/2fCqyXWatozXXD6PdTBKhUqUaVWrGNeM4udTnyu3BqK33WT3JHZWwdTEtVW0m0tupbfUslTc/mL6pr5gJUKs6Va1WNObhSnFxlKey7JXybvbczjWArKaUltfiV/Clc5AvPt6z0h1BIiQPk+AWWjcfWor+FUlC7u0nk++LyPt4alVj88UxpT4o2DRuteJc4U5whVcpRinZxd20uGXoZ+IyqioucW1ZX5+/EqlRja50vDY6ksmnF9bV/Y88cplVHRqR52xUXU0n6M+4zlHeLsfM4RmrSSfearrFh6NNw5KGw3dvN7lbg3l/g2MBVqVE9bukYeY0aVJx0KzZTGgZogCAQgCCRAIAJAKsvKxAEAgBCCTM0VR269OPDaTfcs/oUYqeijKXZ67HRhKfxK0Y9vpubseXPVmk/FDHNUqGHTfOnKclfhBWXrN/wBpq5XC8pT5beP9F1FcWc8NkvO1fD7Bcjo6h81RSqy7dt3j+xQPOY6euvLs28P2ctR3kXGlsasPh61d/wDHSqTt1uMW0vF2RRShrmo82fMVd2Pz623m3dvNvrZ6o7SAghIIAQEmWkdSVj6LvVDDbeLg+EIym/Zesl5GfmlTRh2udl78Cuq7ROhHljjM3Axyb637Ag17T9Ruu000koqN+PHLxbN/ARtRXbuedzGblXfZsV52HCQAQBAIQBBIgEAKsvKxIAgCAQAvNVaN6k6nyxSXfJ/ZeplZpO0Iw5u/h/ZrZTTvOU+St4/0bMYhvHKNf8ZymPnFPKnGFNd9tp+smvA9Dl8NNBPnudNNWiUOFw0qtSFKPSqThCL6nJqK9zslJRTk+rcsvbc/Q1GlGEYwirRjFRiupJWXseTbbd2cRqfxRxvJ4Dk07OtVhD+mPPf/AKpeJ35bDVWvyX6LaSvI5Cbx0nxKdmfLnZny2RTQU0Ln2fR9H1RWaPuCvIIyjpPokMbVpSUqVSVOVs3GTV+xriu85cRCFT5ZK58ySfEtsJrpi4fibFZcbx2ZeccvQzp5bRl0br32lTpRfA6lojHw5Km6kHCbhFyV9pQbV2r5bm+owppKTS6jma3LTlqNRWbjNfK7ezEZNO6Z8yipKzVzXdYsLh4U9qnTUJuSSabS63zd25M08DXqzqaW7oycww9GnT1RjZ397GumsYxABAEAhAEEiAVReViAJAEAQDbdWqOzh1LjOUpeG5e3qeezKeqtbkrfc9JllPTQvzbf2+xZ1KijFyllFJuT6kldnCld2RoHDMViHVqVKst85zm+xybf1PWQjpiorq2OxK2x6aPrzp1YVKctmcHtQlZc19eeR9KnGfyyWxNr7M3PAfELGQsqsadddbWxJ+Mcv2nJUyijLotrzXn+T4dGL4FTrvrKsfKhswlSVOE7wck7zk1dprerRXqMNg/8tqTd7iENJrR1FhjyeZQ3dnwMFmTFbhHuXH2e2HW9l1JdZKPYuJMWq7tnNN3Z8mTojC8tiKNLhKpFS/Ss5eiZz156KcpckfMnZNnXTyxxmTgY5t9S9wCr1nrc6EOpOT8cl7PzNjLIfLKf0MTNal5Rhy3KU0zJEAgAgCAQgCCSrLyogJEASAMU3kt7yS62G0t2Em9kb/h6ShCMFujFLyVjyVSeubk+tnsacFCCiupWKbXfGclgK7XSmlTj/W7P9u0/A6MDDXXj2b+H7LqavI5GejOo9sOt7LqS2uSj2LT6MSo7tnNJ3Z8nxUdkz4k7JkMxEzkufB74d3uX0t9z6iexafRmrDThCMpQlGMknGTi0pJ5pp8ci6lODVotNkpo+ZOyuWt2VyTEOQ+TZtQMLtYmVR7qdN27JTyXptmdmc7UlHm/T2iqq9rHQjCOYzsFG0b9bBBq2lq23XqPhey7ll9D0mEhooxX18TzGMqa68n9PAxDoOYSAIBABAEAhAKsvKxAICRAM/QdHbxFNcE9p/05+9jkxtTRQk+e3ideBp668Vy38P2bseZPUmh/FHF5YehwvOpLv6MfeZr5VDpT+hdRXFmhGuXmVSVkjpirI+kM3ZNkt2VyTEOU+Tyr7rFdXhY+ZGO0znsz5MmguadNNWifS4GRhqDqThTjvnKMV2OTt9SZyUIuT6tyW7bnYo00oqKXNSSS7FkeUu279ZxGo6+YbD0sNtxpQjVnUjGMoxs+Mm2lvyVs+s08DiK0p6XJtJde5dTlK/E0FVew1lMuudG+H2H2cLKrxqVHb9MeavXaMXMqmqqkupepRVd2bQZ5UZ9afJ0pS+WDfikWU4a5qPNldWeiDlyRpN+vzPUHkhAIAJAEAgAgEAKsvKxIAgEBJsOqNHOpU6kop9+b9omRmtTaMPr78zYyinvKf0+7+xspim4YGLSm2pJSjus1dPwZKbW6BrumtAYFUqtaVFQcITlem3G9k30Vk/I7cPi6+tQUr3fXuWRnK9jnka/WvI9MqvYdVxnPaWXiJS1LYm9zxKiDxqPMpm9z4Z8nyQe6Lz7L7UnC8pjIPhTjOb7+ivWSfgcWYT00Guex8VXaJ0s88cpz34k4varUaKeUKbk12zdvaHqa2XwtBy5/Yupra5pzZolp2fQ+E5HD0aPGFOKl+q2frc85Vnrm5c2crd3csMPG8ku32KyD41krbNDZ4ykl4LN+y8zvy6Gqtfkv0Z2Z1NNG3N/s1Y3TzwgkQCACQBAIAIBVl5WQASAIBk4TSFal+HNxV7uOTTfcyirh6VXpq5fRxNWl0JWLXD6zVF+JCMu1Nxf1OGplUH0JNd+/4NCnm1RdOKfdt+T3paZoy3twfavqjiqZbWjws+79nbTzOhLjdd/6uVWu2PisG1CSfKThFtO9kuc79XRt4n3gaElX+dWsuvwNLDzhUd4tPuOdm4dhkYdZF9NbH0j0aPviSeU8NF9ncVyoxZGlHvozQlTEVOTpON9ly510rLtSfFo5MRpw8dcntcrlaO7PfGau4ylfaoSkvmhaaf8Abd+aK4YyjPhLx29QpxfWbN8PcG4069WSacpqCuuEVd+svQzs0qXlGK7/ABKqz3SNuMspOP6yYvlsZiKnDlHGP6YcxeezfxPQYeGilFdnqdMVZBq5hOWxmHp8OUTl+mPOfpG3iMRPRSk+wSdkdhPPnMZOBjm32WAKbWetepCHyxu++X+EjbyyFqblzfoYOa1L1FDkvUpzSMshAEEiAQASAIBACrLysQCACQBAICRAL/QFH+HKTXSdu9L/AC2YWaVL1FFdS9Tfymnam5836e2TGau4OrfaoRTf5ocx3/ptfxOSGMrQ4Sf139TXU5LrKnE6lQ/4a0o/yzipLzVrepoUs4lFWnG/dt+S2Nd9aKjFar4uG6CqrrhL6OzNCnmeHnxdu8sVaLKmvRnB2qQlB9UouL9TuhOM1eLT7tyxNPgbVqFh8q1XtjCPhzn7xMTOanQp/X7L7lFd8EbcYZznLdYdN11jq86NacEp7EVGbS5iUXeO55pvPrNyhQh8GKkl/Z0RitO5Yav6142rWpYeThU25bO24WlFWbbWzZOyTe7gU18JSjBzV1Y+ZQSVz5xmoOIjnSrQq9kk4Sfum/FEwzCD6Sa8wqiM3UjQFehialTEU3T2aezTu4tScmrtNN7lH9xXjMRCcEoO+5E5JrY3czCoz8HG0V25gg0/SVbbrVJcHJ27lkvRHp8NDRSjHsPK4mprrSl2+mxjlxQIBCAIJEAgAkAgBVl5WIAgEAEgCAQEl7o7SlKMIwd4tLN2um+O7PeYuKwNadRzVnc3MJmFGFONOV1bw8izo4iE+hOMuxPPyM2pRqU+lFo06denU6Ekz1Ki0gB8zgpK0kpLimrp+DJTcXdA+MPh4U1s04RhG7ezFJK742R9TqSm7zd32ktt8T7nez2bbVns33X4XPhdpByrHaq4+m3KVJ1d7lOnJSu+OXS9Ddhi6Mtk7d50KcSy+H2Al/5dSc4uLpU+jKLTjKeSye7JTKcfUXw0l1v0Pmo9jopkFJACJAGbjavJUZyX5YO3fay9bF1CGupGPNlGIqfDpSlyRo6PUHkxBIkAQCEAQSIBABAKovKxIAgCAQASAIBASIBk0cfVjum+55r1OaphKM+MV6eh008XXp9GT9fUzqOnJrpwUu1Oz+px1Mqg+hJrv3/B2082munFPu2/Jm0dL0Zb24PtX1RxVMurR4Wfd+zup5nQlxbXf+jNp1YyzjJS7mmcc6cobSTR2wqQmrxafcfZ8H2QAzcJTWzmr3f+/UEGuaQ0pKNepGCi4KVkmurJ599zZo5fTnSi5XTe5iVsyqQrSUbNJ2/PmfVLTMX0otdqdyqeVzXQkn37F1PNoPpxa7t/wZuH0jQupOaSWbVnfwW9nK8FXUrafwdax+HcdWr8+BgaW0y6ydOMdmndXv0pWz8DVwuBVJ65O78jIxePdZaIq0fNlUd5nkAEASAIBCAIJEAgBVl5UQEiQBAEAgAkAQCAkQBIAgCnbNZPrDV9mE7O6MqjpGtHdNtdUs/fM5amCoT4xt3bHXTx1eHCV+/f9mbR02/zwv2xf0f3OKplS/hLx9/Y7qebv+cfD8P8n1jdPTlHYpfw42s5fml4/l8PMtw+XQhvU3fl+yrEZlOe1PZef6Km5omYQgEAEAQSIBABAEgCAQgCCSAgqy8rEAgJEgCAIBABIAgEBIgCQBAEAgBCCRAEASAQAQBBIgEAEASAIBCAQElWXlQgCAQEiQBAEAgAkAQCAkQBIAgCAQAhBIgCAJAIAIAgkQCACAJAEAgBVlxWIBEAIAkEkAEAUAQASAIBASIAkAUAIBABRBIoAUAQgCgBQBECRAEAgAogCAf/2Q==" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/head-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="java">
+          <p style="opacity: 0;">Minecraft Villager Shop Generator</p>
+          <div class="card" style="margin: 1%;">
+            <div class="card-header">
+              Minecraft Command Science
+            </div>
+            <div class="card-body">
+              <div class="j"></div>
+              <h5 class="card-title">Minecraft Villager Shop Generator</h5>
+              <p class="card-text">Generate vanilla minecraft villager shops based on the /summon command with command blocks.</p>
+              <div class="d-flex justify-content-end">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QDxAPDxATDw8VERAWDg0VEBUYFg0SGBYWGBsYFhMYHCkgGBolGxUVITEhJikrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGislHiAtKy0tLS0tLSsrLS0tLS0uLS0tLSstLS0rLS0tLS8tLS0tListLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAABAAUEBgcDAgj/xAA8EAACAQICBQoEBAYCAwAAAAAAAQIDEQQhBQYSMUETIjJRYXGBkaGxB1LB0TNCcqIjYoKS4fBD8RSywv/EABsBAQADAQEBAQAAAAAAAAAAAAABAwUEBgIH/8QANhEAAgECBAIIBgIABwEAAAAAAAECAxEEBRIhMVEyQWFxkaGx8BMigcHR4ULxBhQVIzNSYnL/2gAMAwEAAhEDEQA/AMw9aeNIQBBIgEAEgCAQAQBAIQBBIgEAEgCCRAIAJAIAIAkAQSQAQBIBABAEAqy8rEAhAEEiAQASAIBABAEAhAEEiAQASAIJEAgAkAgAgCQBBJABAEgEAEAqzoKxIAgEIAgkQCACQBAIAIAgEIAgkT4nOMI6pOyR906c6klCCbb6kS5y08ww1TaM19dvU7a2VYylvKm7dm/pcTsODg7CAIBABIBABAEgCCSACAJAIAVZ0FYgCQBAIQBBIgEAEgCAQAQBAPqcHHpJxfU017nypRaumfThJOzTuY/LHhMVi6mIm5Se3UuSP0zB4ClhaajBWdt31thPERiru5zXOvSzEnjJPc9ldS+p908RVpf8cmu5nzVwlCsrVIqXehjj5R6Vmu3/AAaNHO8TDpWl3qz8vwZFf/DeDqbwvHud14O/qj7p6YpvpKUe3evualLPqMv+SLXmvz5GNX/wzXjvSmpd+z+68zMo4unPozT7L2fk8zSo43D1uhNPs4Pwe5j18uxVDepTaXPivFXR7nUcQkAgAgCQBBJABAEAqy8rIAIAkAQCEAQSIBABIAgEuAbjgNBxpJS6VSyu3+V9SXAwMRjJ1W0nZe+J6TDYKnSSbV5e+AaavChUezfmtLK+byv6mfVk4wbRp4aCnVipcL+m5oxjnpTEx8ty8f8AfUAxADGq1G28wRc+HUsLC576ITqV4X3RvJru3etjSyuj8TFR7N/D92MfOsQ6eDn/AOvl8ePlc2s9mfnxABIBABAEgCCSACAVZeViAQAQBIAgEIAgkQCACQDM0RQ5SvShw2k33LN+xTiZ6KUpdh0YWnrrRj2+m5vx5o9SVumqnNjHrbb8P+z4my2kt7lLVoQl0op96+pQ4RfFHVGpKPRZXYrQVKbunKD7HdeT+5U8PF8DojjKi47lZiNXaq6Eoz7Oi/XL1Knh5LgdEcbB8VYo8To+tT/EpyiuMrXX9yyKnCS4ovjVhLgzFjTlNxp04uc5O0YRTbk+xLeRFXexM2krs3nV7UbFQhKrUdOFSSSjRcm3Fb3tSSavuyz3bzcyuSw8pSqLjtt1HmM5vi4xhSeybbv18vuZOJ0NiafSpSa+aPOX7T0EMVRnwl9jzE8JWhxi/pv6GCXnOQASAQAQBIAgkgBVl5UIJEAgAgCQBAIQBBIgEANg1QoXqzqfLGy75P7RfmZmZTtBR5v0NTKqd6kp8l6/0bWYxumoad07COJnTlGTUNmO0rPO13l4+hx1a6U2n1GnQwkpU1JPieVHSdCe6ol2S5vuI1YPrIlh6keKMtMsKRAIAW2gsNGClVjCMZydnNRV3FcL99yynFLcprTb2vsi3Vd8UWFJgY/SDUJSXNik32u3afdOGuSjzK6k9EHLkjRr9Z6Y8oIBABIBABAEgEBJVl5UIAgkQCACAJAEAhAEEiAbJq1pDD0qbhOezNybd07WyS527h6mVjqFWpPVFXSRsZfiKNOGmTs2/e5scMRBxc4yjKKTbkmmkl2oyZxcOkrGxCSn0XfuOTYqu6lSdR75zlJ/1Nv6mJJ6m3zPVQjoio8tjExcrRfbkQfRjYfFVKf4c5Q/TJpeW5hSa4M+ZQjLpK5n09a8TTaUtmquO1Gz84/YujXkuJzTwlN8Ni0wuuVF/i0503xatNfR+hasQutHPLBy/i7nRsHKKhGKe5K63Z8cmd6VkZEnd3PWq7RZJBr+nMSlScE85NJ92/6HdgIaqt+Rn5lU00bc3b7mvG2efEEiAQASAQAQBAKsuKyACAIJEAgAgCQBAIQBBIgGdoaltVorgk3LtVtz7LtHJjpKNB9ux2ZfFyxEbdW/v6lxidBYae+movrg3H0WXoeYlh6cuo9fDGVofyv37lBpXVRNpUqtuOzOP/0vsc8sH/1Z1wzP/vHwNaxeia1OTi47Vt7i7r7+hDy7E6VNQuny38uPkWRzfBubg5pNc9vPh5lRiIuMmpJxfytNPyZyNW2Z3qSlutzN1ewnLYuhT4OonL9Mec/SJ90o6ppFOInopSfYdfNc86eWJm7JXyfAAodLT50Y9S9/+jZy6FoOXN+hhZpUvUUeS9TBNEzBIAgkQCACQCACAVZeViQCACAIJEAgAgCQBAIQBBJe6tUvxJ90V7v6GTmc+jD6+/M2Mph0p/T7/guzJNkwa8ryb/3IA16n/EqL+aXpe/sekl/s0f8A5R5eH+/XX/p+X9F1WowmtmcYzj8skmvJnmmk+J6mMnF3TsfGidCYanWdanTUJqLWTds/5dy3HxGlCLukWzxFScdMndGZjdIwpTUJJu6vdWyzf2O+jhJ1YOUWjNr42FGahJMwMbpaLf8ADzy3tWS8Doo5dJv/AHNl2HNXzOKVqSu+0qqlRybcndvezVhCMI6Y8DGnOU5OUndsD6PkgAkAQSIBABIBACrLysQBIBABAEEiAQAQBIBm6O0bUrt7CtFPnTe6P3Zz4jEwor5uPI6cNhZ138vBdZew0DQ2bPacuM72fluMl5jV1XVrcjYjllFRs735+9jJweEjShsRbau3d73c5q9Z1p6mdeHoRow0RPacrJvsKS4p8fU2acnxat55HThIa60V9fA5cbU0UJP6eJX6JhebfUvV5fc0synako836GVldPVVcuS9fbLgxDfM7BRtG/WySDWdK1tutUfBOy7ll9D0WFhooxX18TzGMqa60n9PAxToOYhAEEiAQASAIJEAgBACrLisQBAEgEAEAQSIB7YXDTqS2YRcnx6l3vgV1KsKavN2LKVGdV6YK5dQ1beznUtPsjeK+viZrzT5to7eZqLKfl3lv3bF/oLA8hR2G05OUpSa48F6JHBiq/xqmpcDQwmH+BT0vjczqqik21uTbOY6jXq+PcIOTSlbhuuy2hS+LUUOZTiKypU3PkYtTTsHBrYkpZZZW8/8Hd/pk79JW99X7OD/AFWnp6Lv76/0VGIxU6nSeXCK3I0aGGp0V8q35mXiMVUrv5nty6iy0RC0G+t+iy+5l5lO9VR5L1NfK6emk5c36e2ZxnmkWM3sU20m3GLaSV7tLqPuEdUlHmV1JaYOXJGlX69/HvPUHku8QBAIQBBIgEAEgCCRAIAVZeVEIJEAQBIBAD6hFtpJNt7kldvwDaSuyUm3ZFrDQGIcdq0U/kcs/scLzGipW37zvWW13G+3d1my6tYF0qFqkbTlOTksnbgt3Yr+Jl46tGrUvF7JGrgKEqVK0lZt/osa0IKLk+akm5PqSV2ciTbsjusaRgPiRTdlWw84LhKElLLtjK1vNm1UyaS6E0+/b8l7oPqZsOF0/hsZCUMNNznZOUHCUXCN1du6zW5ZX3mbXwlWhvNbFUoOPEamjoTjszu+5tWK6VWVKWqPEorUo1Y6ZcCqx2g6dOLny3JxW91LWX9SsaVHMJyelwu+wzZ5Sn0JeP6NZWkaLbSmt+UrNKXarr3NZRla9jkqZXiYfxv3e7mfh8ZJLmTuuxpooqYanU6UdymNevQ+W7XY/wAMstHaQlKpGMopq921lkszNxWCp04OcW+40sJj6lWooSS7zacPpCl2w719UZZqnpiIUKivOMKngm/PgWQqzh0W0VzpQn0kmadpulThWcaUdmKSurt5vPj2WN3BznOnqmzz+Op06dXTBGAdRxiAQgCCRAIAJAEEkAKwvKiAEIJEAQBIBuWqOBjyDqyitqUpbMrZqKytfvTMPMqrdTRfZLzN/K6SVLW1u35FzOgld3suN+BnGoa/o3XzRtVJOq6LtuqQcV/erx9Tsnl9ePVfuLHSkj01w0vSWja9SjUhUU0qcJQnGSe27OzT+XafgfWAoSeJipK1t/D9inH51c5EeqOw6P8ACvB2pYiu10pxhHugrv1n6GBnNS84w5K/j/RzV3ukby4p71cxSg4prTpqpXxdfnOVGFWcaMG8oxi9m6Xba9+09Tg6KpUo2W7W51QgkirWKXFNHVc+rAsS73jJx7nZ+Z8OVz4lBSVpK67Tb9R6lWpKrKcnKMVGMb23u7ee/cl5mTmk7RjHnucn+Vo05aoRszbTFPoscLG0V25kkGo46o5Vajaabk8mrNLhl3WPS0IqNOKXI8riJuVWTfW/6PAtKRAEAhAEEiAQASAQElYXlQgEAIQSIA3AOlaNpxp0adNNXjCKffbP1ueUrT+JUlLmz11Cn8OnGHJFdrrjuQ0fiZp2k6bhBrepVOYmu7av4FuDp660V238NzogryRww9KdR0P4TaMhP/yq84RnHmUknFNP88rp98DKzOq46Yp9vvzKar4I2vHamaPq58jyUvmpScP2rm+hyU8yxEP5X79/2fCqyXWatozXXD6PdTBKhUqUaVWrGNeM4udTnyu3BqK33WT3JHZWwdTEtVW0m0tupbfUslTc/mL6pr5gJUKs6Va1WNObhSnFxlKey7JXybvbczjWArKaUltfiV/Clc5AvPt6z0h1BIiQPk+AWWjcfWor+FUlC7u0nk++LyPt4alVj88UxpT4o2DRuteJc4U5whVcpRinZxd20uGXoZ+IyqioucW1ZX5+/EqlRja50vDY6ksmnF9bV/Y88cplVHRqR52xUXU0n6M+4zlHeLsfM4RmrSSfearrFh6NNw5KGw3dvN7lbg3l/g2MBVqVE9bukYeY0aVJx0KzZTGgZogCAQgCCRAIAJAKsvKxAEAgBCCTM0VR269OPDaTfcs/oUYqeijKXZ67HRhKfxK0Y9vpubseXPVmk/FDHNUqGHTfOnKclfhBWXrN/wBpq5XC8pT5beP9F1FcWc8NkvO1fD7Bcjo6h81RSqy7dt3j+xQPOY6euvLs28P2ctR3kXGlsasPh61d/wDHSqTt1uMW0vF2RRShrmo82fMVd2Pz623m3dvNvrZ6o7SAghIIAQEmWkdSVj6LvVDDbeLg+EIym/Zesl5GfmlTRh2udl78Cuq7ROhHljjM3Axyb637Ag17T9Ruu000koqN+PHLxbN/ARtRXbuedzGblXfZsV52HCQAQBAIQBBIgEAKsvKxIAgCAQAvNVaN6k6nyxSXfJ/ZeplZpO0Iw5u/h/ZrZTTvOU+St4/0bMYhvHKNf8ZymPnFPKnGFNd9tp+smvA9Dl8NNBPnudNNWiUOFw0qtSFKPSqThCL6nJqK9zslJRTk+rcsvbc/Q1GlGEYwirRjFRiupJWXseTbbd2cRqfxRxvJ4Dk07OtVhD+mPPf/AKpeJ35bDVWvyX6LaSvI5Cbx0nxKdmfLnZny2RTQU0Ln2fR9H1RWaPuCvIIyjpPokMbVpSUqVSVOVs3GTV+xriu85cRCFT5ZK58ySfEtsJrpi4fibFZcbx2ZeccvQzp5bRl0br32lTpRfA6lojHw5Km6kHCbhFyV9pQbV2r5bm+owppKTS6jma3LTlqNRWbjNfK7ezEZNO6Z8yipKzVzXdYsLh4U9qnTUJuSSabS63zd25M08DXqzqaW7oycww9GnT1RjZ397GumsYxABAEAhAEEiAVReViAJAEAQDbdWqOzh1LjOUpeG5e3qeezKeqtbkrfc9JllPTQvzbf2+xZ1KijFyllFJuT6kldnCld2RoHDMViHVqVKst85zm+xybf1PWQjpiorq2OxK2x6aPrzp1YVKctmcHtQlZc19eeR9KnGfyyWxNr7M3PAfELGQsqsadddbWxJ+Mcv2nJUyijLotrzXn+T4dGL4FTrvrKsfKhswlSVOE7wck7zk1dprerRXqMNg/8tqTd7iENJrR1FhjyeZQ3dnwMFmTFbhHuXH2e2HW9l1JdZKPYuJMWq7tnNN3Z8mTojC8tiKNLhKpFS/Ss5eiZz156KcpckfMnZNnXTyxxmTgY5t9S9wCr1nrc6EOpOT8cl7PzNjLIfLKf0MTNal5Rhy3KU0zJEAgAgCAQgCCSrLyogJEASAMU3kt7yS62G0t2Em9kb/h6ShCMFujFLyVjyVSeubk+tnsacFCCiupWKbXfGclgK7XSmlTj/W7P9u0/A6MDDXXj2b+H7LqavI5GejOo9sOt7LqS2uSj2LT6MSo7tnNJ3Z8nxUdkz4k7JkMxEzkufB74d3uX0t9z6iexafRmrDThCMpQlGMknGTi0pJ5pp8ci6lODVotNkpo+ZOyuWt2VyTEOQ+TZtQMLtYmVR7qdN27JTyXptmdmc7UlHm/T2iqq9rHQjCOYzsFG0b9bBBq2lq23XqPhey7ll9D0mEhooxX18TzGMqa68n9PAxDoOYSAIBABAEAhAKsvKxAICRAM/QdHbxFNcE9p/05+9jkxtTRQk+e3ideBp668Vy38P2bseZPUmh/FHF5YehwvOpLv6MfeZr5VDpT+hdRXFmhGuXmVSVkjpirI+kM3ZNkt2VyTEOU+Tyr7rFdXhY+ZGO0znsz5MmguadNNWifS4GRhqDqThTjvnKMV2OTt9SZyUIuT6tyW7bnYo00oqKXNSSS7FkeUu279ZxGo6+YbD0sNtxpQjVnUjGMoxs+Mm2lvyVs+s08DiK0p6XJtJde5dTlK/E0FVew1lMuudG+H2H2cLKrxqVHb9MeavXaMXMqmqqkupepRVd2bQZ5UZ9afJ0pS+WDfikWU4a5qPNldWeiDlyRpN+vzPUHkhAIAJAEAgAgEAKsvKxIAgEBJsOqNHOpU6kop9+b9omRmtTaMPr78zYyinvKf0+7+xspim4YGLSm2pJSjus1dPwZKbW6BrumtAYFUqtaVFQcITlem3G9k30Vk/I7cPi6+tQUr3fXuWRnK9jnka/WvI9MqvYdVxnPaWXiJS1LYm9zxKiDxqPMpm9z4Z8nyQe6Lz7L7UnC8pjIPhTjOb7+ivWSfgcWYT00Guex8VXaJ0s88cpz34k4varUaKeUKbk12zdvaHqa2XwtBy5/Yupra5pzZolp2fQ+E5HD0aPGFOKl+q2frc85Vnrm5c2crd3csMPG8ku32KyD41krbNDZ4ykl4LN+y8zvy6Gqtfkv0Z2Z1NNG3N/s1Y3TzwgkQCACQBAIAIBVl5WQASAIBk4TSFal+HNxV7uOTTfcyirh6VXpq5fRxNWl0JWLXD6zVF+JCMu1Nxf1OGplUH0JNd+/4NCnm1RdOKfdt+T3paZoy3twfavqjiqZbWjws+79nbTzOhLjdd/6uVWu2PisG1CSfKThFtO9kuc79XRt4n3gaElX+dWsuvwNLDzhUd4tPuOdm4dhkYdZF9NbH0j0aPviSeU8NF9ncVyoxZGlHvozQlTEVOTpON9ly510rLtSfFo5MRpw8dcntcrlaO7PfGau4ylfaoSkvmhaaf8Abd+aK4YyjPhLx29QpxfWbN8PcG4069WSacpqCuuEVd+svQzs0qXlGK7/ABKqz3SNuMspOP6yYvlsZiKnDlHGP6YcxeezfxPQYeGilFdnqdMVZBq5hOWxmHp8OUTl+mPOfpG3iMRPRSk+wSdkdhPPnMZOBjm32WAKbWetepCHyxu++X+EjbyyFqblzfoYOa1L1FDkvUpzSMshAEEiAQASAIBACrLysQCACQBAICRAL/QFH+HKTXSdu9L/AC2YWaVL1FFdS9Tfymnam5836e2TGau4OrfaoRTf5ocx3/ptfxOSGMrQ4Sf139TXU5LrKnE6lQ/4a0o/yzipLzVrepoUs4lFWnG/dt+S2Nd9aKjFar4uG6CqrrhL6OzNCnmeHnxdu8sVaLKmvRnB2qQlB9UouL9TuhOM1eLT7tyxNPgbVqFh8q1XtjCPhzn7xMTOanQp/X7L7lFd8EbcYZznLdYdN11jq86NacEp7EVGbS5iUXeO55pvPrNyhQh8GKkl/Z0RitO5Yav6142rWpYeThU25bO24WlFWbbWzZOyTe7gU18JSjBzV1Y+ZQSVz5xmoOIjnSrQq9kk4Sfum/FEwzCD6Sa8wqiM3UjQFehialTEU3T2aezTu4tScmrtNN7lH9xXjMRCcEoO+5E5JrY3czCoz8HG0V25gg0/SVbbrVJcHJ27lkvRHp8NDRSjHsPK4mprrSl2+mxjlxQIBCAIJEAgAkAgBVl5WIAgEAEgCAQEl7o7SlKMIwd4tLN2um+O7PeYuKwNadRzVnc3MJmFGFONOV1bw8izo4iE+hOMuxPPyM2pRqU+lFo06denU6Ekz1Ki0gB8zgpK0kpLimrp+DJTcXdA+MPh4U1s04RhG7ezFJK742R9TqSm7zd32ktt8T7nez2bbVns33X4XPhdpByrHaq4+m3KVJ1d7lOnJSu+OXS9Ddhi6Mtk7d50KcSy+H2Al/5dSc4uLpU+jKLTjKeSye7JTKcfUXw0l1v0Pmo9jopkFJACJAGbjavJUZyX5YO3fay9bF1CGupGPNlGIqfDpSlyRo6PUHkxBIkAQCEAQSIBABAKovKxIAgCAQASAIBASIBk0cfVjum+55r1OaphKM+MV6eh008XXp9GT9fUzqOnJrpwUu1Oz+px1Mqg+hJrv3/B2082munFPu2/Jm0dL0Zb24PtX1RxVMurR4Wfd+zup5nQlxbXf+jNp1YyzjJS7mmcc6cobSTR2wqQmrxafcfZ8H2QAzcJTWzmr3f+/UEGuaQ0pKNepGCi4KVkmurJ599zZo5fTnSi5XTe5iVsyqQrSUbNJ2/PmfVLTMX0otdqdyqeVzXQkn37F1PNoPpxa7t/wZuH0jQupOaSWbVnfwW9nK8FXUrafwdax+HcdWr8+BgaW0y6ydOMdmndXv0pWz8DVwuBVJ65O78jIxePdZaIq0fNlUd5nkAEASAIBCAIJEAgBVl5UQEiQBAEAgAkAQCAkQBIAgCnbNZPrDV9mE7O6MqjpGtHdNtdUs/fM5amCoT4xt3bHXTx1eHCV+/f9mbR02/zwv2xf0f3OKplS/hLx9/Y7qebv+cfD8P8n1jdPTlHYpfw42s5fml4/l8PMtw+XQhvU3fl+yrEZlOe1PZef6Km5omYQgEAEAQSIBABAEgCAQgCCSAgqy8rEAgJEgCAIBABIAgEBIgCQBAEAgBCCRAEASAQAQBBIgEAEASAIBCAQElWXlQgCAQEiQBAEAgAkAQCAkQBIAgCAQAhBIgCAJAIAIAgkQCACAJAEAgBVlxWIBEAIAkEkAEAUAQASAIBASIAkAUAIBABRBIoAUAQgCgBQBECRAEAgAogCAf/2Q==" style="width: 5%;">
+              </div>
+              <a href="https://minecraftcommand.science/head-generator" class="btn btn-primary" target="_blank">Commencer</a>
+            </div>
+          </div>
+        </li>
+
+
     </ul>
     
 </body>
