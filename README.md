@@ -9,3 +9,6 @@
 
 > Pour le support, c'est ici :
 [Discord => TaoTools Support](https://discord.gg/v8dnpk8)
+
+> Pour plus d'information je vous renvoie ici :
+[TaoTools (site internet)](https://taotools.github.io/SiteWeb/acceuil.html)
