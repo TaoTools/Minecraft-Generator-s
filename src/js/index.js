@@ -10,12 +10,12 @@
     
 
     $( '#list li' ).each( function(){
-        
 
-        var letter = $(this).text().match( /^\s*([a-z])/im )[1].toUpperCase();
-     
 
-        if ( $( "#_" + letter ).length == 0 ){
+        let letter = $(this).text().match(/^\s*([a-z])/im)[1].toUpperCase();
+
+
+        if ( $( "#_" + letter ).length === 0 ){
             $( '#list' ).append(
 
             );
@@ -25,11 +25,11 @@
         $( '#_' + letter ).append( $(this) );
     });
 
-$(document).ready(function(){
+    $(window).on("load", function(){
 
     $(".j").append("<span class=\"badge badge-success\" style=\"margin=1%\">@Java</span>");
     $(".bd").append("<span class=\"badge badge-success\" style=\"margin=1%\">@bedrock</span>");
-    
+
 
 
     $("#search").on("keyup", function() {
