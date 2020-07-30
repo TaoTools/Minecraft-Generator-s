@@ -39,12 +39,12 @@ $(document).ready(function(){
       });
     });
 
-    $("#Bedrock").click(function(){
+    $("#Bedrock").on("click", function(){
       $("#list li").fadeIn();
       $("#list li:not('.bedrock')").fadeOut();
     });
 
-    $("#Java").click(function(){
+    $("#Java").on("click", function(){
       $("#list li").fadeIn();
       $("#list li:not('.java')").fadeOut();
     });
