@@ -4,7 +4,8 @@
     border: 1px solid #eee;
     border-left-width: 5px;
     border-radius: 3px;
-  }
+}
+
 .callout h4 {
   margin-top: 0;
   margin-bottom: 5px;
@@ -66,4 +67,11 @@
 }
 .callout-bdc h4 {
   color: #29527a;
+}
+
+.callout-dark {
+    border-left-color: #d6d5d5;
+}
+.callout-dark h4 {
+    color: #ffffff;
 }
