@@ -29,6 +29,7 @@ $(document).ready(function(){
 
     $(".j").append("<span class=\"badge badge-success\" style=\"margin=1%\">@Java</span>");
     $(".bd").append("<span class=\"badge badge-success\" style=\"margin=1%\">@bedrock</span>");
+    
 
 
     $("#search").on("keyup", function() {
