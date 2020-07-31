@@ -25,12 +25,12 @@ function getCookie(name1) {
 function checkThemeCookie(){
     let siteTheme = getCookie('siteTheme');
     if(siteTheme === 'sombre'){
-        $("body").css("background-color", "#292b2f");
+        $("body, .modal-content").css("background-color", "#292b2f");
         $(".callout-primary").removeClass("callout-primary").addClass("callout-dark");
         $('button, a').css("background-color", "#2f3136").css("color", "#2e3032").removeClass("btn-primary").addClass("btn-secondary");
         $('.card').css("background-color", "#36393f");
         $('.callout').css("background-color", "#36393f");
-        $('h5, label, p, label, div, button, .badge, a').css("color", "#e2e2e2");
+        $('h5, label, p, label, div, button, .badge, h5').css("color", "#e2e2e2");
         $( "#theme" ).prop( "checked", true );
     }else{
         console.log('Pas de cookie siteTheme');
@@ -114,12 +114,12 @@ $(window).on("load", function () {
     $('#theme').on('click', function () {
         if ($('#theme').is(':checked')) {
 
-            $("body").css("background-color", "#292b2f");
+            $("body, .modal-content").css("background-color", "#292b2f");
             $(".callout-primary").removeClass("callout-primary").addClass("callout-dark");
             $('button, a').css("background-color", "#2f3136").css("color", "#2e3032").removeClass("btn-primary").addClass("btn-secondary");
             $('.card').css("background-color", "#36393f");
             $('.callout').css("background-color", "#36393f");
-            $('h5, label, p, label, div, button, .badge, a').css("color", "#e2e2e2");
+            $('h5, label, p, label, div, button, .badge, a, h5').css("color", "#e2e2e2");
             setCookie('siteTheme', 'sombre', 0.007);
 
         }
