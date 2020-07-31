@@ -30,7 +30,7 @@ function checkThemeCookie(){
         $('button, a').css("background-color", "#2f3136").css("color", "#2e3032").removeClass("btn-primary").addClass("btn-secondary");
         $('.card').css("background-color", "#36393f");
         $('.callout').css("background-color", "#36393f");
-        $('h5, label, p, label, div, button, .badge, h5').css("color", "#e2e2e2");
+        $('h5, label, p, div, button, .badge, h5, a').css("color", "#e2e2e2");
         $( "#theme" ).prop( "checked", true );
     }else{
         console.log('Pas de cookie siteTheme');
