@@ -1,8 +1,9 @@
-function setCookie(name, value, expirationInDay){
+function setCookie(name, value, days){
     let date = new Date();
-    date.setTime(date.getTime()+(expirationInDay*24*60*60*1000));
-    let expires = "expires="+ date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path/";
+    days = days || 365;
+    date.setTime(+ date + (days*24*60*60*1000));
+    document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
+    return value
 }
 
 function getCookie(name1) {
@@ -37,9 +38,16 @@ function checkThemeCookie(){
     }
 }
 
+function checkCookieConsent() {
+    if(checkCookie('cookieConsent')){
+
+    }else{
+        $('#staticBackdrop').modal('show');
+    }
+}
+
+checkCookieConsent();
 checkThemeCookie();
-
-
 
 $('#list').html(
     $('#list li')
@@ -66,6 +74,11 @@ $('#list li').each(function () {
     $('#_' + letter).append($(this));
 });
 
+function checkCookie(name) {
+    let cookie = getCookie(name);
+    return (cookie !== "");
+}
+
 $(window).on("load", function () {
 
     $(".j").append("<span class=\"badge badge-success\" style=\"margin=1%\">@Java</span>");
@@ -82,6 +95,11 @@ $(window).on("load", function () {
     $("#Bedrock").on("click", function () {
         $("#list li").fadeIn();
         $("#list li:not('.bedrock')").fadeOut();
+    });
+
+    $("#CookieConsented").on("click", function () {
+        setCookie("cookieConsent","true",255);
+        $('#staticBackdrop').modal('hide');
     });
 
     $("#Java").on("click", function () {
